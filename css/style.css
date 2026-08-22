@@ -363,7 +363,10 @@ position:fixed;
 
 inset:0;
 
-background:#05070f;
+background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/samurai-bg.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 
 display:flex;
 
