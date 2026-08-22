@@ -3,38 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon</title>
-
+<title>Blog | Sushil Nepali</title>
 <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
+    <div class="background">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+        <div class="grid"></div>
+    </div>
 
-<nav>
+    <nav>
+        <a href="index.html" class="logo"><span>SN</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<a href="index.html" class="logo">SN</a>
+    <section class="projects">
+        <div class="section-title">
+            <h2>Blog</h2>
+            <p>Thoughts, learnings, and updates from my journey.</p>
+        </div>
+        <div class="project-grid" id="blog-grid">
+            <p>Loading posts...</p>
+        </div>
+    </section>
 
-<ul class="nav-links">
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html" class="active">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<section class="hero">
-
-<h1>Coming Soon</h1>
-
-<p>This page is currently under construction.</p>
-
-</section>
-
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="js/blog.js"></script>
 </body>
 </html>

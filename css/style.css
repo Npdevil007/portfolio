@@ -909,3 +909,12 @@ font-weight:600;
   color: #fff;
   grid-template-columns: 1fr;
 }
+.post-content {
+  max-width: 800px;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
