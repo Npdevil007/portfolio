@@ -2,32 +2,31 @@ window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    setTimeout(() => {
-
-        loader.style.opacity = "0";
-
+    if (loader) {
         setTimeout(() => {
+            loader.style.opacity = "0";
 
-            loader.remove();
+            setTimeout(() => {
+                loader.remove();
 
-            const welcome = document.getElementById("welcome");
+                const welcome = document.getElementById("welcome");
 
-            if(welcome){
-                welcome.classList.add("show");
-            }
+                if(welcome){
+                    welcome.classList.add("show");
+                }
 
-        },800);
+            },800);
 
-    },2500);
+        },2500);
+    }
 
 });
 
 document.addEventListener("click",(e)=>{
 
     if(e.target.id==="enterSite"){
-
-        document.getElementById("welcome").style.display="none";
-
+        const welcome = document.getElementById("welcome");
+        if (welcome) welcome.style.display="none";
     }
 
 });
@@ -45,40 +44,42 @@ let deleting=false;
 
 const typing=document.getElementById("typing");
 
-function type(){
+if (typing) {
+    function type(){
 
-    const current=words[wordIndex];
+        const current=words[wordIndex];
 
-    if(!deleting){
+        if(!deleting){
 
-        typing.textContent=current.substring(0,charIndex++);
+            typing.textContent=current.substring(0,charIndex++);
 
-        if(charIndex>current.length){
+            if(charIndex>current.length){
 
-            deleting=true;
+                deleting=true;
 
-            setTimeout(type,1400);
+                setTimeout(type,1400);
 
-            return;
+                return;
+
+            }
+
+        }else{
+
+            typing.textContent=current.substring(0,charIndex--);
+
+            if(charIndex<0){
+
+                deleting=false;
+
+                wordIndex=(wordIndex+1)%words.length;
+
+            }
 
         }
 
-    }else{
-
-        typing.textContent=current.substring(0,charIndex--);
-
-        if(charIndex<0){
-
-            deleting=false;
-
-            wordIndex=(wordIndex+1)%words.length;
-
-        }
+        setTimeout(type,deleting?45:90);
 
     }
 
-    setTimeout(type,deleting?45:90);
-
+    type();
 }
-
-type();
