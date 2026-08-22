@@ -426,43 +426,31 @@ inset:0;
 display:flex;
 justify-content:center;
 align-items:center;
-background:rgba(0,0,0,.55);
+background:rgba(0,0,0,.75);
 backdrop-filter:blur(10px);
 opacity:0;
 pointer-events:none;
-transition:.5s;
 z-index:5000;
+transition:opacity .6s ease;
 }
 
 #welcome.show{
 opacity:1;
-pointer-events:auto;
 }
 
-.welcome-box{
-width:430px;
-padding:45px;
-border-radius:28px;
-background:rgba(20,20,30,.82);
-border:1px solid rgba(255,255,255,.12);
-box-shadow:0 0 50px rgba(0,217,255,.25);
-text-align:center;
+#welcome-text{
+font-size:56px;
+font-weight:700;
+letter-spacing:2px;
+color:white;
+opacity:0;
+transform:scale(0.85);
+transition:opacity .8s ease, transform .8s ease;
 }
 
-.welcome-box h2{
-font-size:42px;
-margin:20px 0;
-color:#ff244a;
-}
-
-.welcome-box p{
-color:#ddd;
-line-height:1.7;
-margin-bottom:35px;
-}
-
-.icon{
-font-size:60px;
+#welcome.show #welcome-text{
+opacity:1;
+transform:scale(1);
 }
 .tag{
     display:inline-block;
