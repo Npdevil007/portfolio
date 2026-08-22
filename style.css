@@ -622,6 +622,7 @@ text-align:center;
 .hero h1 span{
     white-space:nowrap;
 }
+}
 .cursor{
     color:#00d9ff;
     animation:blink 1s infinite;
@@ -851,44 +852,12 @@ font-weight:600;
 
 }
     
-/* Social Links Section */
+/* Social links - shared base */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  padding: 2rem 0;
   flex-wrap: wrap;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  border: 1px solid #444;
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-size: 0.95rem;
-}
-
-.social-link:hover {
-  background: #444;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.social-link svg {
-  flex-shrink: 0;
-}
-/* Column layout for social links */
-.social-links-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.9rem;
-  margin-top: 1.5rem;
 }
 
 .social-link {
@@ -916,9 +885,19 @@ font-weight:600;
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
 }
+
+/* Column layout (used on contact page) */
+.social-links-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
 /* Contact page background */
 .contact-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/samurai-bg.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/samurai-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -928,13 +907,5 @@ font-weight:600;
 
 .contact-hero {
   color: #fff;
-}
-
-/* Column layout for social links */
-.social-links-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 2rem 0;
+  grid-template-columns: 1fr;
 }
