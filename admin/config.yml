@@ -2,8 +2,7 @@ backend:
   name: github
   repo: Npdevil007/portfolio
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  base_url: https://sveltia-cms-auth.ss692223sushil.workers.dev
 
 media_folder: "images"
 public_folder: "images"
