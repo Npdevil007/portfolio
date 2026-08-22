@@ -1,7 +1,7 @@
 ---
 title: This, I Promise
 date: 2026-08-23
-image: images/philosophore-img.png
+image: images/philosophore-img.jpg
 ---
 *I don't promise to fix your sadness, but I promise to sit with you in it.*
 
