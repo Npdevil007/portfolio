@@ -13,20 +13,20 @@ window.addEventListener("load", () => {
 
                 if(welcome){
                     welcome.classList.add("show");
+
+                    setTimeout(() => {
+                        welcome.classList.remove("show");
+
+                        setTimeout(() => {
+                            welcome.remove();
+                        }, 600);
+
+                    }, 1500);
                 }
 
             },800);
 
         },2500);
-    }
-
-});
-
-document.addEventListener("click",(e)=>{
-
-    if(e.target.id==="enterSite"){
-        const welcome = document.getElementById("welcome");
-        if (welcome) welcome.style.display="none";
     }
 
 });

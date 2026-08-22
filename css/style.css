@@ -918,3 +918,10 @@ font-weight:600;
   border-radius: 20px;
   margin-bottom: 20px;
 }
+.welcome-box {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#welcome:not(.show) .welcome-box {
+  transform: scale(0.95);
+}
