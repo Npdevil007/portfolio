@@ -36,18 +36,7 @@ Tme rw mero katha hru lekhxu
 Timro maya le variyeko dekhxu mero maan
 Tme lai harek parathna ma magxu jhan jhan....
 
-
 Harek pal timro khyal ma  samjhinxu ma lai lay3ko timro gunnharu lai
 Khai tha xina tme le maile jatti kaai gahiro maya gartheu rw
 Hajarou le man parayne tme tyo aakash ko junn lai 
 ma lakau tara bich ko aauta sitara na huda ma k nai farak partheo rw...
-
-
-
-Uska cherha bhul gaya huu,
-
-sav kuch aapna bhul gaya huu,
-
-tum manjil par khaer se pachoo,
-
-me to rasta bhul gaya hun
