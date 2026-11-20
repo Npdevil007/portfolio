@@ -9,12 +9,15 @@ public_folder: "images"
 
 collections:
   - name: "posts"
-    label: "Blog Posts"
+    label: "Posts"
     folder: "posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # No {{slug}} here: slug comes from the title, which is now optional.
+    # The timestamp makes every filename unique even for picture-only posts.
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
+    summary: "{{title}} {{date}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
