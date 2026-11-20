@@ -927,3 +927,127 @@ font-weight:600;
     border-radius:18px;
     display:block;
 }
+/* ---------- Homepage: Latest Posts strip ---------- */
+.latest{
+    width:min(1200px,92%);
+    margin:0 auto 80px;
+}
+
+.latest .section-title{
+    margin-bottom:30px;
+}
+
+.latest-all{
+    display:inline-block;
+    margin-top:10px;
+    color:#00d9ff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.latest-all:hover{
+    text-decoration:underline;
+}
+
+.latest-viewport{
+    overflow:hidden;
+    padding:10px 0;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+}
+
+.latest-track{
+    display:flex;
+    width:max-content;
+    animation:latest-scroll var(--dur,30s) linear infinite;
+}
+
+.latest-track.static{
+    animation:none;
+    width:auto;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.latest-viewport:hover .latest-track,
+.latest-viewport:focus-within .latest-track{
+    animation-play-state:paused;
+}
+
+@keyframes latest-scroll{
+    to{ transform:translateX(-50%); }
+}
+
+.latest-card{
+    position:relative;
+    flex:0 0 260px;
+    height:200px;
+    margin-right:18px;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#1e293b,#111827);
+    border:1px solid rgba(255,255,255,.08);
+    transition:transform .3s, box-shadow .3s;
+}
+
+.latest-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(0,217,255,.18);
+}
+
+.latest-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.latest-meta{
+    position:relative;
+    padding:16px;
+}
+
+.latest-card.has-img .latest-meta{
+    padding-top:44px;
+    background:linear-gradient(transparent,rgba(0,0,0,.82));
+}
+
+.latest-card.has-img .latest-meta:empty{
+    display:none;
+}
+
+.latest-card.text-only{
+    justify-content:center;
+}
+
+.latest-meta h3{
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.latest-meta p{
+    font-size:14px;
+    line-height:1.5;
+    color:#cbd5e1;
+    margin-bottom:6px;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+.latest-meta span{
+    font-size:12px;
+    color:#9ca3af;
+}
+
+@media (prefers-reduced-motion:reduce){
+    .latest-track{ animation:none; }
+    .latest-viewport{ overflow-x:auto; }
+}
