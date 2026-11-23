@@ -17,15 +17,11 @@
     </div>
 
     <!-- Loading Screen -->
-   <div id="loader">
-    <span class="loader-status" id="loader-status">Loading</span>
-    <span class="loader-name">Sushil Nepali</span>
-    <div class="loader-count"><span id="loader-count">000</span><small>%</small></div>
-    <div class="loader-line"><div id="loader-fill"></div></div>
-</div>
-
-    <div id="welcome">
-        <h2 id="welcome-text">WELCOME</h2>
+    <div id="loader">
+        <span class="loader-status" id="loader-status">Loading</span>
+        <span class="loader-name">Sushil Nepali</span>
+        <div class="loader-count"><span id="loader-count">000</span><small>%</small></div>
+        <div class="loader-line"><div id="loader-fill"></div></div>
     </div>
 
     <!-- Navigation -->
@@ -89,17 +85,27 @@
             </div>
         </div>
     </section>
-<!-- Latest Posts (auto-scrolling) -->
-<section class="latest" id="latest" hidden>
-    <div class="section-title">
-        <h2>Latest Posts</h2>
-        <p>Fresh from the blog and gallery.</p>
-        <a href="blog.html" class="latest-all">View all posts →</a>
+
+    <!-- Status bar -->
+    <div class="hero-meta-bar">
+        <span class="status-dot"></span>
+        <span>Open to new projects</span>
+        <span>·</span>
+        <span><span data-clock>--:--</span> Nepal</span>
     </div>
-    <div class="latest-viewport">
-        <div class="latest-track" id="latest-track"></div>
-    </div>
-</section>
+
+    <!-- Latest Posts (auto-scrolling) -->
+    <section class="latest" id="latest" hidden>
+        <div class="section-title">
+            <h2>Latest Posts</h2>
+            <p>Fresh from the blog and gallery.</p>
+            <a href="blog.html" class="latest-all">View all posts →</a>
+        </div>
+        <div class="latest-viewport">
+            <div class="latest-track" id="latest-track"></div>
+        </div>
+    </section>
+
     <section class="projects">
         <div class="section-title">
             <h2>Featured Projects</h2>
@@ -129,8 +135,10 @@
             </div>
         </div>
     </section>
-<script src="js/posts.js"></script>
-<script src="js/latest.js"></script>
-<script src="js/script.js"></script>
+
+    <script src="js/posts.js"></script>
+    <script src="js/latest.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
