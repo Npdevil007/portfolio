@@ -1053,7 +1053,11 @@ font-weight:600;
 }
 /* ---------- Counter loader ---------- */
 #loader{
-    background:#09090b;
+    background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('../images/samurai-bg.jpg');
+    background-color:#09090b;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     display:block;
     transition:transform .9s cubic-bezier(.76,0,.24,1);
 }
