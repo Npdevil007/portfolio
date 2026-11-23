@@ -1,0 +1,89 @@
+/* ABOUT SECTION — scoped styles; won't intentionally style the rest of your site */
+.about-section {
+  --about-bg: #0b0d10;
+  --about-card: #11151a;
+  --about-line: rgba(255,255,255,.09);
+  --about-text: #f1f2f3;
+  --about-muted: #929aa4;
+  --about-accent: #a9f0d1;
+  background: var(--about-bg);
+  color: var(--about-text);
+  padding: clamp(70px, 10vw, 130px) 24px;
+  font-family: inherit;
+}
+.about-section * { box-sizing: border-box; }
+.about-shell { max-width: 1120px; margin: 0 auto; }
+.about-heading { max-width: 740px; margin-bottom: 52px; }
+.about-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--about-muted); font-size: 11px; letter-spacing: .17em; font-weight: 700; }
+.about-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--about-accent); box-shadow: 0 0 12px rgba(169,240,209,.35); }
+.about-heading h2 { margin: 22px 0 18px; font-size: clamp(38px, 7vw, 76px); line-height: .99; letter-spacing: -.055em; font-weight: 650; }
+.about-heading h2 span { color: #737c86; }
+.about-lead { max-width: 620px; color: #b3bac2; font-size: clamp(15px, 2vw, 18px); line-height: 1.8; margin: 0; }
+.about-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.about-card { position: relative; overflow: hidden; background: linear-gradient(145deg, #14181e, #101318); border: 1px solid var(--about-line); border-radius: 18px; padding: clamp(22px, 3vw, 32px); transition: border-color .25s ease, transform .25s ease, background .25s ease; }
+.about-card:hover { border-color: rgba(169,240,209,.26); transform: translateY(-3px); }
+.about-intro { grid-column: span 5; min-height: 350px; }
+.about-skills { grid-column: span 7; min-height: 350px; }
+.about-journey { grid-column: span 7; }
+.about-now { grid-column: span 5; display: flex; flex-direction: column; justify-content: space-between; min-height: 350px; }
+.about-card-top { display: flex; justify-content: space-between; align-items: center; color: #79838d; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.about-mark { font-size: 20px; color: #87919b; }
+.about-card h3 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -.045em; line-height: 1.08; margin: 34px 0 20px; font-weight: 600; }
+.about-card p { color: var(--about-muted); font-size: 14px; line-height: 1.75; }
+.about-intro p { max-width: 450px; }
+.about-skill-group { margin: 24px 0; }
+.about-skill-label { display: block; margin-bottom: 10px; color: #7d8791; font-size: 10px; letter-spacing: .14em; font-weight: 700; }
+.about-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.about-tags span { border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.025); border-radius: 999px; padding: 8px 12px; color: #d2d7dc; font-size: 12px; }
+.about-small-note { font-size: 12px !important; margin-top: 26px; }
+.about-timeline { margin-top: 28px; }
+.about-timeline-item { display: grid; grid-template-columns: 18px 1fr; gap: 14px; position: relative; padding-bottom: 27px; }
+.about-timeline-item:last-child { padding-bottom: 0; }
+.about-timeline-item:not(:last-child)::after { content: ""; position: absolute; width: 1px; left: 7px; top: 16px; bottom: 0; background: linear-gradient(rgba(169,240,209,.42), rgba(255,255,255,.06)); }
+.about-timeline-marker { width: 15px; height: 15px; margin-top: 2px; border-radius: 50%; border: 1px solid rgba(169,240,209,.6); background: #11151a; box-shadow: 0 0 12px rgba(169,240,209,.08); z-index: 1; }
+.about-timeline-item:first-child .about-timeline-marker { background: var(--about-accent); box-shadow: 0 0 16px rgba(169,240,209,.22); }
+.about-timeline-label { color: #82918d; font-size: 9px; letter-spacing: .15em; font-weight: 700; }
+.about-timeline-item h4 { margin: 6px 0 4px; color: #e4e7e9; font-size: 16px; font-weight: 550; }
+.about-timeline-item p { margin: 0; max-width: 510px; font-size: 13px; }
+.about-current-status { display: inline-flex; align-items: center; gap: 9px; width: fit-content; border: 1px solid rgba(169,240,209,.15); background: rgba(169,240,209,.04); border-radius: 999px; padding: 10px 13px; margin-top: 30px; font-size: 9px; letter-spacing: .11em; color: #b6c9c0; }
+.about-footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; margin-top: 22px; border-top: 1px solid var(--about-line); color: #606a74; font-size: 9px; letter-spacing: .14em; }
+.about-footer-symbol { color: #9aa3ac; letter-spacing: .08em; }
+.about-section .reveal { opacity: 1; transform: none; }
+.about-section.about-motion .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+.about-section.about-motion .reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 760px) { .about-intro, .about-skills, .about-journey, .about-now { grid-column: span 12; } .about-intro, .about-skills, .about-now { min-height: auto; } .about-heading { margin-bottom: 34px; } .about-card h3 { margin-top: 28px; } }
+@media (prefers-reduced-motion: reduce) { .about-section .reveal, .about-card { transition: none !important; transform: none !important; } }
+
+/* ---------- Integration with the rest of the site ---------- */
+.about-section{
+  --about-bg: transparent;      /* let the animated background show through */
+  --about-accent: #00d9ff;      /* match the site's cyan */
+  padding-top: 150px;           /* clear the fixed nav pill */
+}
+.about-card{
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.about-card:hover{ border-color: rgba(0,217,255,.35); }
+.about-dot{ box-shadow: 0 0 12px rgba(0,217,255,.45); }
+.about-timeline-item:not(:last-child)::after{
+  background: linear-gradient(rgba(0,217,255,.5), rgba(255,255,255,.06));
+}
+.about-timeline-marker{ border-color: rgba(0,217,255,.7); background:#0b0d10; }
+.about-timeline-item:first-child .about-timeline-marker{
+  background: var(--about-accent);
+  box-shadow: 0 0 16px rgba(0,217,255,.35);
+}
+.about-current-status{
+  border-color: rgba(0,217,255,.25);
+  background: rgba(0,217,255,.06);
+  color: #b9ecf7;
+}
+/* Small labels were 9-10px: too small to read comfortably */
+.about-card-top,
+.about-skill-label,
+.about-timeline-label,
+.about-current-status,
+.about-footer{ font-size: 11px; }
+.about-footer{ color: #8b95a0; }
