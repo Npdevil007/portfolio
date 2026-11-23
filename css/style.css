@@ -1051,3 +1051,66 @@ font-weight:600;
     .latest-track{ animation:none; }
     .latest-viewport{ overflow-x:auto; }
 }
+/* ---------- Counter loader ---------- */
+#loader{
+    background:#09090b;
+    display:block;
+    transition:transform .9s cubic-bezier(.76,0,.24,1);
+}
+
+#loader.done{
+    transform:translateY(-100%);
+}
+
+.loader-status,
+.loader-name{
+    position:absolute;
+    top:32px;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.loader-status{
+    left:5vw;
+    color:#00d9ff;
+}
+
+.loader-name{
+    right:5vw;
+    color:#9ca3af;
+}
+
+.loader-count{
+    position:absolute;
+    left:5vw;
+    bottom:48px;
+    font-size:clamp(80px,18vw,240px);
+    font-weight:600;
+    line-height:.9;
+    letter-spacing:-.04em;
+    font-variant-numeric:tabular-nums;
+}
+
+.loader-count small{
+    font-size:.25em;
+    margin-left:.1em;
+    color:#00d9ff;
+    letter-spacing:0;
+}
+
+.loader-line{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:3px;
+    background:rgba(255,255,255,.08);
+}
+
+#loader-fill{
+    height:100%;
+    background:#00d9ff;
+    transform:scaleX(0);
+    transform-origin:left;
+}
