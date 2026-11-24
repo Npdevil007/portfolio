@@ -1274,3 +1274,26 @@ font-weight:600;
 .grid-glow.on{
     opacity:1;
 }
+/* ---------- Animated grid (dots) ---------- */
+.grid{
+    background-image:radial-gradient(rgba(255,255,255,.22) 1.2px, transparent 1.7px);
+    background-size:30px 30px;
+    background-position:var(--off,0px) var(--off,0px);
+}
+
+.grid-glow{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:0;
+    transition:opacity .4s ease;
+    background-image:radial-gradient(rgba(0,217,255,.95) 1.7px, transparent 2.3px);
+    background-size:30px 30px;
+    background-position:var(--off,0px) var(--off,0px);
+    -webkit-mask-image:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#000,transparent 70%);
+    mask-image:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#000,transparent 70%);
+}
+
+.grid-glow.on{
+    opacity:1;
+}
