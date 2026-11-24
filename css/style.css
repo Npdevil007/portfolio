@@ -1247,3 +1247,30 @@ font-weight:600;
 @media (prefers-reduced-motion:reduce){
     .reveal{ opacity:1; transform:none; transition:none; }
 }
+/* ---------- Animated grid ---------- */
+.grid{
+    background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:60px 60px;
+    background-position:var(--off,0px) var(--off,0px);
+}
+
+.grid-glow{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:0;
+    transition:opacity .4s ease;
+    background-image:
+        linear-gradient(rgba(0,217,255,.55) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,217,255,.55) 1px,transparent 1px);
+    background-size:60px 60px;
+    background-position:var(--off,0px) var(--off,0px);
+    -webkit-mask-image:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#000,transparent 70%);
+    mask-image:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#000,transparent 70%);
+}
+
+.grid-glow.on{
+    opacity:1;
+}
