@@ -51,4 +51,9 @@
     }, { threshold: 0.15 });
     els.forEach(el => { el.classList.add("reveal"); io.observe(el); });
   }
+    // Keep the active nav link visible on small screens
+  const activeLink = document.querySelector(".nav-links a.active");
+  if (activeLink && activeLink.scrollIntoView) {
+    activeLink.scrollIntoView({ inline: "center", block: "nearest" });
+  }
 })();
