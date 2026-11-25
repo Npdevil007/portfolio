@@ -1297,3 +1297,50 @@ font-weight:600;
 .grid-glow.on{
     opacity:1;
 }
+/* ---------- Nav on small screens ---------- */
+.logo{
+    flex-shrink:0;          /* never let the home icon get squeezed */
+}
+
+@media (max-width:700px){
+    nav{
+        top:14px;
+        padding:8px 12px;
+        gap:10px;
+    }
+
+    .logo{
+        width:44px;
+        height:44px;
+    }
+
+    .logo svg{
+        width:20px;
+        height:20px;
+    }
+
+    .nav-links{
+        gap:2px;
+        min-width:0;
+        overflow-x:auto;    /* scrolls sideways if a very small phone still can't fit all links */
+        scrollbar-width:none;
+    }
+
+    .nav-links::-webkit-scrollbar{
+        display:none;
+    }
+
+    .nav-links li{
+        flex-shrink:0;
+    }
+
+    .nav-links li:first-child{
+        display:none;       /* the home icon already goes home, so the "Home" text link is redundant here */
+    }
+
+    .nav-links a{
+        padding:8px 11px;
+        font-size:13px;
+        white-space:nowrap;
+    }
+}
